@@ -1,0 +1,93 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body ng-app="app" ng-controller="appCtrl">
+<section>
+    <div class="container-fluid">
+       <div class="validate">
+           <div ng-class="{'alert-danger': text == 'Error', 'alert-success': text == 'Éxito' }" class="alert" role="alert" ng-if="status">
+               <button type="button" class="close" ng-click="change()">
+                   <span aria-hidden="false" >&times;</span>
+               </button>
+               <strong>{{text}}</strong>
+           </div>
+       </div>
+        <form name="formLogin" ng-submit="submitForm(formLogin.$valid)" novalidate>
+            <div class="content">
+                <p>Entrar na minha conta</p>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Email" name="email" ng-model="email" required>
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></span>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="password" class="form-control" name="password" ng-model="password" placeholder="Senha" required>
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                    </div>
+                </div>
+                <div class="input-group submit">
+                    <input type="submit" value="Entrar"/>
+                </div>
+                <div class="input-group remember">
+                   <label>
+                       <input type="checkbox"> Mantenha-me conectado
+                   </label>
+                </div>
+            </div>
+
+        </form>
+        <div class="content-wrap">
+            <div class="wrap-link"><a href="#">Precisa de uma conta? <span>Inscrever-se</span></a></div>
+            <div class="wrap-link"><a href="#">Esqueceu sua senha?<span> Clique aqui.</span></a></div>
+        </div>
+        <div class="wrap-box">
+            <div class="row">
+                <div class="col">
+                    <span class="icon">
+                        ¡
+                    </span>
+                </div>
+                <div class="col">
+                    <span>Keyrus</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script src="js/plugins.js"></script>
+<!--<script src="js/start.app.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>

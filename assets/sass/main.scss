@@ -1,0 +1,210 @@
+@font-face {
+  font-family: 'MyriadPro-Bold';
+  src: url('/fonts/MyriadPro-Bold.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/MyriadPro-Bold.otf') format('opentype'),
+  url('/fonts/MyriadPro-Bold.woff') format('woff'),
+  url('/fonts/MyriadPro-Bold.ttf') format('truetype'),
+  url('/fonts/MyriadPro-Bold.svg#MyriadPro-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyriadPro-regular';
+  src: url('/fonts/MYRIADPROREGULAR.eot');
+  src: local('/fonts/MYRIADPROREGULAR'),
+  url('/fonts/MYRIADPROREGULAR.woff') format('woff'),
+  url('/fonts/MYRIADPROREGULAR.ttf') format('truetype');
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('/img/bg.jpg');
+  @media(max-width: 1440px){
+    height: auto;
+  }
+  section {
+    width: 100%;
+    .container-fluid {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      .validate{
+        width: 95%;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      form {
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+        background-image: url(/img/bg-form.png);
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        padding: 15px 0;
+        @media(max-width: 600px){
+          background-image: initial;
+          background-color: #ffffff;
+          border-radius: 5px;
+        }
+        .content {
+          width: 50%;
+          margin: 0 auto;
+          @media(max-width: 600px){
+            width: 80%;
+          }
+          p {
+            text-align: center;
+            color: #939797;
+            padding: 40px 0 10px;
+            font-family: 'MyriadPro-Bold';
+            font-size: 23px;
+            line-height: 1.1;
+          }
+          .input-group {
+            justify-content: center;
+            position: relative;
+            &.remember {
+              padding: 20px;
+              label {
+                color: #939797;
+                font-family: 'MyriadPro-regular';
+                input {
+                  font-family: 'MyriadPro-regular';
+                  color: #a09f9f;
+                }
+              }
+            }
+            &.submit {
+              margin-top: 20px;
+              input {
+                border: none;
+                background-color: #2993de;
+                color: #fff;
+                padding: 10px 40px;
+                border-radius: 5px;
+                font-family: 'MyriadPro-Bold';
+                font-size: 23px;
+                line-height: 1.1;
+                border: 2px solid #1a5f8f;
+              }
+            }
+            &.mb-3 {
+              .input-group-prepend {
+                position: absolute;
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 43px;
+                z-index: 3;
+                span {
+                  background-color: transparent;
+                  border: none;
+                  i {
+                    color: #e2e1e1;
+                  }
+                }
+              }
+              input {
+                font-family: MyriadPro-regular;
+                color: #a09f9f;
+                -webkit-box-shadow: -1px -7px 22px -13px #e8e8e8;
+                -moz-box-shadow: -1px -7px 22px -13px #e8e8e8;
+                box-shadow: -1px -7px 22px -13px #e8e8e8;
+                border-bottom: 0 solid #efeeee;
+                border-top: 3px solid #efeeee;
+                border-radius: 6px;
+                background-color: #f7f6f6;
+                &:focus {
+                  -webkit-box-shadow: -1px -7px 22px -13px rgba(232, 232, 232, 1);
+                  -moz-box-shadow: -1px -7px 22px -13px rgba(232, 232, 232, 1);
+                  box-shadow: -1px -7px 22px -13px rgba(232, 232, 232, 1);
+                  border: 1px solid #ced4da;
+                  outline: none;
+                }
+                &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                  color: #a09f9f;
+                  opacity: 1; /* Firefox */
+                }
+
+                &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+                  color: #a09f9f;
+                }
+
+                &::-ms-input-placeholder { /* Microsoft Edge */
+                  color: #a09f9f;
+                }
+              }
+            }
+          }
+
+        }
+      }
+      .content-wrap {
+        text-align: center;
+        margin-top: 20px;
+        .wrap-link {
+          a {
+            font-family: 'MyriadPro-Bold';
+            color: #808080;
+            span {
+              color: #2993de;
+            }
+          }
+          &:first-child {
+            a {
+              text-decoration: underline;
+            }
+          }
+          &:last-child {
+            padding-top: 10px;
+            a {
+              font-family: 'MyriadPro-regular';
+            }
+          }
+        }
+      }
+      .wrap-box {
+        width: 95%;
+        max-width: 600px;
+        margin: 40px auto 0;
+        .row {
+          div {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+            &:first-child {
+              background-color: #7b7b7b;
+              color: #ffffff;
+              border-bottom: 1px solid #ffffff;
+              border-right: 1px solid #ffffff;
+              border-top: 1px solid #989898;
+              border-left: 1px solid #989898;
+              font-family: 'MyriadPro-Bold';
+              padding-top: 5px;
+              max-width: 59px;
+              margin-right: 10px;
+              .icon{
+                font-size: 30px;
+                line-height: 1.1;
+              }
+            }
+            &:last-child {
+              background-color: #ffffff;
+              color: #7b7b7b;
+              border-bottom: 1px solid #e1e1e1;
+              border-right: 1px solid #e1e1e1;
+              span{
+                font-style: italic;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
